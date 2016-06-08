@@ -44,7 +44,7 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   exec { 'update /etc/motd':
-  path => '/etc/motd',
+  path => '/usr/local/bin',
   command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
  }
 
