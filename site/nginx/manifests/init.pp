@@ -32,7 +32,6 @@ $user = $::osfamily ? {
 'debian' => 'www-data',
 'windows' => 'nobody',
 }
-Lab 18.1: Proposed Solution
 # if $root isn't set, then fall back to the platform default
 $docroot = $root ? {
 undef => $default_docroot,
