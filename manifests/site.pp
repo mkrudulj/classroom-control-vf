@@ -48,11 +48,11 @@ node default {
     $vmname = capitalize($::virtual)
     notify { "This is a ${vmname.upcase} virtual machine.": }
   }
-
   notify { "Hello, my name is ${::hostname}": }
   exec { 'update /etc/motd':
   path => '/usr/local/bin',
   command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
  }
+ include nginx
  include skeleton
 }
