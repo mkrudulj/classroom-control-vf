@@ -48,9 +48,7 @@ node default {
     $vmname = capitalize($::virtual)
     notify { "This is a ${vmname.upcase} virtual machine.": }
   }
-  class { 'nginx':
-   root => '/var/www/html',
-  }
+
   notify { "Hello, my name is ${::hostname}": }
   exec { 'update /etc/motd':
   path => '/usr/local/bin',
